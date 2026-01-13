@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-route"></i>
+                <span>CareerPath<span class="brand-highlight">Pro</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Find Your <span class="hero-highlight">Perfect Career</span></h1>
+            <p class="hero-subtitle">AI-powered career recommendations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-robot"></i> AI Recommendations</h2>
+                <p>Tell us about yourself</p>
+            </div>
+
+            <div class="card">
+                <div class="form-group">
+                    <label><i class="fas fa-code"></i> Your Skills</label>
+                    <textarea id="skills" rows="3">python, sql, javascript, machine learning</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-heart"></i> Your Interests</label>
+                    <textarea id="interests" rows="2">data science, web development, ai</textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-briefcase"></i> Experience</label>
+                        <select id="experience">
+                            <option value="1">1 year</option>
+                            <option value="2" selected>2 years</option>
+                            <option value="3">3 years</option>
+                            <option value="4">4+ years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-graduation-cap"></i> Education</label>
+                        <select id="education">
+                            <option value="High School">High School</option>
+                            <option value="Bachelor's" selected>Bachelor's</option>
+                            <option value="Master's">Master's</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="getRecommendations()">
+                    <i class="fas fa-magic"></i> Get Recommendations
+                </button>
+                
+                <div class="loading" id="loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i> Analyzing...
+                </div>
+
+                <div id="results" class="results-container"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Top Career Matches</h2>
+            </div>
+            <div id="careers" class="careers-grid"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 CareerPathPro</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

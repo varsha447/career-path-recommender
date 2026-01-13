@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# System
+*.db
+*.sqlite3
+
+# Node modules (if any)
+node_modules/
+
+# Python bytecode
+*.pyc
+
+# Vercel
+.vercel/
+
+# Temporary files
+*.tmp
+*.temp
